@@ -6,9 +6,7 @@ import deleteTask,{ finishTask }  from '../actions/TaskListViewActions';
 class TaskListContainer extends Component {
     render() {
         const { data } = this.props.listData;
-        console.log(data);
         const { onDeleteItem, onFinishedItem }= this.props;
-        
         return (
             <TaskFlatList dataList={data} {...this.props} />    
         );
@@ -16,15 +14,16 @@ class TaskListContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    return {
-        listData : state.tasksList
-    }
+        return {
+            listData : state.tasksList
+        }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         onFinishedItem: (index) => dispatch(
-            finishTask(index))
+            finishTask(index)),
+        onDeleteItem : (index) => dispatch( deleteTask(index) )
     }
 }
 

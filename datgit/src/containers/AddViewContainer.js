@@ -18,7 +18,7 @@ class AddViewContainer extends Component {
 export default connect(
     state => {
         return {
-
+            
         }
     },
     dispatch => {

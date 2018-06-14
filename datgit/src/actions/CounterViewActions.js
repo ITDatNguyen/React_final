@@ -1,13 +1,11 @@
-const addNumber = (addVal) => {
+const addNumber = () => {
     return {
-      type: 'ADD_NUMBER',
-      value: addVal
+      type: 'ADD_NUMBER'
     }
 }
-export const subNumber = (subVal) => {
+export const subNumber = () => {
     return {
-        type: 'SUB_NUMBER',
-        value: subVal
+        type: 'SUB_NUMBER'
     }
 }
 export default addNumber;

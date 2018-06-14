@@ -13,7 +13,7 @@ const store = createStore(
     number : NumberReducer,
     tasksList : taskListReducer
   })
-);
+);  
 class App extends Component {
   render() {
     return (

@@ -22,8 +22,8 @@ export default connect( state=>{
     },
     dispacth =>{
         return{
-            addNumber: (val) => dispacth( addNumber(val) ),
-            subNumber: (val) => dispacth( subNumber(val) )
+            addNumber: () => dispacth( addNumber() ),
+            subNumber: () => dispacth( subNumber() )
         }
     }
 )

@@ -9,9 +9,10 @@ let appState = {
 
 const taskListReducer = (state = appState , action) => {
     let newTaskList  = state.data;
+    console.log("new task ở reducer",state+"action",action);
     switch(action.type) {
       case 'ADD':
-        const newTask = { title: action.taskName, isFinished: false }
+        const newTask = { title: action.taskName };
         return { ...state, data: [...newTaskList, newTask] }
       case 'FINISH':
         newTaskList[action.atIndex].isPending =! newTaskList[action.atIndex].isPending;
