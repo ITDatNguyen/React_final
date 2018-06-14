@@ -20,7 +20,7 @@ const mapStateToProps = state => {
         listData : state.tasksList
     }
 }
-  
+
 const mapDispatchToProps = dispatch => {
     return {
         onFinishedItem: (index) => dispatch(
